@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    min-height: 100vh;
+  
+    font-family: Arial, Helvetica, sans-serif;
+  
+    background: #101820;
+    color: white;
+  }
+  
+  .container 
+  
+  {
+    width: 90%;
+    max-width: 900px;
+  
+    margin: auto;
+    padding: 60px 20px;
+  
+    text-align: center;
+  }
+  
+  
+  /* title */
+  
+  h1 
+  
+  {
+    margin-bottom: 10px;
+    font-size: 48px;
+  }
+  
+  .subtitle 
+  
+  {
+    margin-bottom: 30px;
+  
+    color: #b9c2ca;
+    font-size: 18px;
+  }
+  
+  
+  /* form */
+  
+  form 
+  
+  
+  {
+    display: flex;
+    justify-content: center;
+  
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  
+  select 
+  
+  {
+    padding: 12px 16px;
+  
+    font-size: 16px;
+  
+    border: none;
+    border-radius: 8px;
+  }
+  
+  button 
+  
+  
+  {
+    padding: 12px 22px;
+  
+    font-size: 16px;
+    font-weight: bold;
+  
+    color: white;
+    background: #e05a47;
+  
+    border: none;
+    border-radius: 8px;
+  
+    cursor: pointer;
+  }
+  
+  button:hover
+  
+  {
+    background: #c94b39;
+  }
+  
+  
+  /* drink result */
+  
+  .drink-card 
+  {
+    display: grid;
+  
+    grid-template-columns: 290px 1fr;
+  
+    gap: 30px;
+  
+    padding: 30px;
+  
+    text-align: left;
+  
+    background: #192630;
+  
+    border-radius: 15px;
+  }
+  
+  .drink-card img 
+  
+  {
+    width: 100%;
+  
+    border-radius: 12px;
+  }
+  
+  .drink-info h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  
+    font-size: 32px;
+  }
+  
+  .category 
+  {
+    margin-top: 0;
+    margin-bottom: 25px;
+  
+    color: #b9c2ca;
+  }
+  
+  .drink-info h3 
+  {
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  li 
+  
+  
+  {
+    margin-bottom: 6px;
+  }
+  
+  .instructions 
+  
+  
+  {
+    line-height: 1.6;
+  }
+  
+  
+  /* errors */
+  
+  .error {
+    max-width: 490px;
+  
+    margin: 23px auto;
+    padding: 16px;
+  
+    background: #4b2020;
+  
+    border-radius: 8px;
+  }
+  
+  
+  /* phone layout */
+  
+  @media (max-width: 650px) {
+  
+    .container {
+      padding: 30px 10px;
+    }
+  
+    h1 {
+      font-size: 36px;
+    }
+  
+    form {
+      flex-direction: column;
+    }
+  
+    select,
+    button {
+      width: 100%;
+    }
+  
+    .drink-card {
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+  
+    .drink-card img {
+      max-width: 350px;
+      margin: auto;
+    }
+  }

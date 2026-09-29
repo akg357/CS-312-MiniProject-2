@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Finder</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+
+
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Cocktail Finder</h1>
+
+        <p class="subtitle">
+
+            select a type of drink and receive a recipe for  cocktail at random.
+        </p>
+
+        <form action="/drink" method="POST">
+
+
+            <select name="drinkType" required>
+
+
+                <option value="Alcoholic">
+
+
+                    Alcoholic
+                </option>
+
+
+                <option value="Non_Alcoholic">
+
+
+
+                    Non-Alcoholic
+                </option>
+
+
+            </select>
+
+
+            <button type="submit">
+
+
+
+                Find a Drink
+
+
+
+            </button>
+        </form>
+
+        <% if (drink) { %>
+
+            <section class="drink-card">
+                <img
+                    src="<%= drink.strDrinkThumb %>"
+                    alt="<%= drink.strDrink %>"
+                >
+                <div class="drink-info">
+                    <h2>
+                        <%= drink.strDrink %>
+                    </h2>
+                    <p class=" category  ">
+                        <%= drink.strAlcoholic %> • <%= drink.strGlass %>
+                    </p>
+
+                    <h3>Ingredients</h3>
+                    <ul>
+
+                        <% ingredients.forEach((item) => { %>
+                            <li>
+                                <%= item.measurement %>
+                                <%= item.ingredient %>
+                            </li>
+                        <% }) %>
+
+                    </ul>
+
+                    <h3>Instructions</h3>
+
+                    <p class="Instructions">
+                        
+                        <%= drink.strInstructions %>
+                    </p>
+
+
+
+
+                </div>
+
+
+
+
+            </section>
+
+        <% } %>
+
+        <% if (error) { %>
+
+            <p class="error">
+                <%= error %>
+            </p>
+
+        <% } %>
+
+    </main>
+
+</body>
+
+</html>
